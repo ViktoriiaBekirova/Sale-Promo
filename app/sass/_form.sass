@@ -1,0 +1,120 @@
+.form-content
+  position: relative
+  width: 100%
+  margin: rem(78)  0 rem(79) 0
+
+.form
+  position: relative
+  display: flex
+  align-items: center
+  width: 100%
+  min-height: rem(96)
+  padding: 0 rem(11)
+  background: $backgroundForm
+  border: 3px dotted rgb(96, 143, 127)
+  @media (max-width: $bigTablet)
+    flex-direction: column
+    padding: rem(30) 0
+  &:before
+    content: ''
+    position: absolute
+    left: rem(-125)
+    top: rem(23)
+    width: rem(75)
+    height: rem(50)
+    background-image: url("../img/right.png")
+    background-size: contain
+    background-repeat: no-repeat
+    @media (max-width: 1230px)
+      left: rem(-95)
+    @media (max-width: 1050px)
+      width: rem(30)
+      height: rem(30)
+      left: rem(-35)
+      top: rem(43)
+  &:after
+    content: ''
+    position: absolute
+    right: rem(-125)
+    top: rem(23)
+    width: rem(75)
+    height: rem(50)
+    background-image: url("../img/left.png")
+    background-size: contain
+    background-repeat: no-repeat
+    @media (max-width: 1230px)
+      right: rem(-95)
+    @media (max-width: 1050px)
+      width: rem(30)
+      height: rem(30)
+      right: rem(-35)
+      top: rem(43)
+  &__input, &__submit
+    position: relative
+    input, button
+      outline: none
+      background: transparent
+    input
+      width: 100%
+      height: rem(44)
+      padding-left: rem(20)
+      font-size: rem(20.83)
+      line-height: 1.5
+      color: #808286
+      background: $backgroundWhite
+      border: 1px solid #56907c
+    button
+      border: none
+      width: 100%
+      height: rem(44)
+      font-size: rem(20.83)
+      font-weight: 600
+      letter-spacing: rem(-1.5)
+      color: $backgroundWhite
+      background: $redColor
+      cursor: pointer
+      transition: 0.3s ease
+      &:hover
+        color: $redColor
+        background: $backgroundWhite
+        border: 1px solid $redColor
+      @media (max-width: $smallPhone)
+        padding: rem(10) 0
+        height: auto
+  &__input
+    position: relative
+    flex-grow: 1
+    margin-right: rem(17)
+    &_error
+      position: absolute
+      color: #FF0000
+      text-align: left
+      @include font(15)
+      margin-top: 3px
+      display: none
+    input:invalid:not(:placeholder-shown)
+      border-color: red
+    input:invalid:not(:placeholder-shown) + .form__input_error
+      display: block
+    @media (max-width: $bigTablet)
+      width: 60%
+      margin-right: 0
+      margin-bottom: rem(30)
+    @media (max-width: $mobile)
+      width: 90%
+  &__submit
+    width: 100%
+    max-width: rem(332)
+    @media (max-width: $bigTablet)
+      max-width: 60%
+    @media (max-width: $mobile)
+      max-width: 90%
+
+
+
+
+
+
+
+
+

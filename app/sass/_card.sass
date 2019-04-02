@@ -1,0 +1,181 @@
+.card
+  position: relative
+  background-color: #e9ecf2
+  box-shadow: 0 0 15px 0 rgba(16, 17, 17, 0.4)
+  &__sale
+    position: absolute
+    top: rem(-15)
+    right: rem(-10)
+    width: rem(105)
+    height: rem(92)
+    z-index: 2
+    span
+      position: absolute
+      top: rem(28)
+      left: rem(31)
+      font-family: Arial, sans-serif
+      font-size: rem(26.06)
+      color: $backgroundWhite
+      z-index: 3
+  &__header
+    display: flex
+    padding: rem(26) rem(18) rem(14) 0
+    @media (max-width: $smallPhone)
+      flex-direction: column
+  &__book
+    position: relative
+    width: rem(174)
+    height: rem(218)
+  &__order
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-grow: 1
+    min-height: rem(218)
+    margin-left: rem(28)
+  &__price
+    display: flex
+    flex-direction: column
+    padding: rem(10) 0 rem(6) rem(25)
+    background: $backgroundPrice
+    &_old
+      font-family: Arial, sans-serif
+      font-size: rem(29.79)
+      line-height: 1
+      color: $grayPriceColor
+      text-decoration: line-through
+    &_new
+      font-family: Arial, sans-serif
+      font-size: rem(37.23)
+      line-height: 1
+      color: $redPriceColor
+  &__button-order
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: rem(44)
+    font-family: Akrobat, sans-serif
+    font-size: rem(24.2)
+    color: $backgroundWhite
+    background: $greenPriceColor
+    text-transform: uppercase
+    cursor: pointer
+    transition: 0.3s ease
+    &:hover
+      background: #2B7240
+      font-weight: bold
+  &__button-more
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: rem(44)
+    font-family: Akrobat, sans-serif
+    font-size: rem(22.34)
+    border: 1px solid #e96c41
+    color: #b83b11
+    background: $backgroundWhite
+    cursor: pointer
+    transition: 0.3s ease
+    &:hover
+      background: #C1C1C1
+      color: #81280C
+      font-weight: bold
+  &__button-important
+    display: flex
+    align-self: flex-end
+    width: fit-content
+    font-family: Corbel, sans-serif
+    font-size: rem(16.67)
+    color: #ab310c
+    border-bottom: 1px dashed #ab310c
+    cursor: pointer
+    transition: 0.3s ease
+    &:hover
+      font-weight: bold
+  &__content
+    position: relative
+    padding: rem(14) rem(25) rem(6) rem(20)
+  &__headline
+    display: inline
+    font-weight: 600
+    border-bottom: 1px solid $blackColor
+  &__text
+    margin-top: rem(13)
+    line-height: rem(26)
+    color: $greenTextColor
+  &__social
+    margin: rem(14) rem(-24) 0 rem(-19)
+    padding: rem(11) rem(31) rem(12) rem(31)
+    background: #fdfdfe
+  &__social-headline
+    color: $grayTextColor
+  &__social-block
+    display: flex
+    justify-content: center
+    margin-top: rem(12)
+    @media (max-width: $middlePhone)
+      flex-wrap: wrap
+      justify-content: flex-start
+      margin-bottom: rem(-10)
+  &__social-icon
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    width: rem(28)
+    height: rem(28)
+    margin-right: rem(10)
+    background: $iconColor
+    border-radius: 20px
+    cursor: pointer
+    transition: 0.3s ease
+    @media (max-width: $middlePhone)
+      margin-bottom: rem(10)
+    &:last-child
+      margin-right: 0
+    &:hover
+      transform: scale(1.1)
+      background: $redColor
+    img
+      width: auto
+      height: auto
+      top: auto
+  &__info
+    display: none
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    padding: rem(39) rem(22)
+    background: $backgroundCardInfo
+    &:before
+      content: ''
+      border: 6px solid transparent
+      border-bottom: 6px solid $backgroundCardInfo
+      position: absolute
+      right: rem(86)
+      margin-left: -6px
+      top: rem(-12)
+      width: 0
+    &_close
+      position: absolute
+      width: rem(23)
+      height: rem(23)
+      top: rem(10)
+      right: rem(10)
+      cursor: pointer
+    &_text
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 100%
+      height: 100%
+      p
+        font-size: rem(20.83)
+        line-height: rem(26)
+        color: $greenTextColor
+
+

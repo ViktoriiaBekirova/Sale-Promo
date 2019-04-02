@@ -1,0 +1,42 @@
+.footer
+  position: relative
+  background: $backgroundFooter
+
+.footer-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: rem(67) 0 rem(65) 0
+
+.footer
+  &__links
+    display: flex
+    margin-bottom: rem(9)
+    &:last-child
+      margin-bottom: 0
+    &_header, &_link
+      font-size: rem(16.67)
+      color: $footerColor
+      @media (max-width: $smallPhone)
+        font-size: rem(15)
+    &_header
+      padding-right: rem(5)
+    &_link
+      position: relative
+      padding-right: rem(16)
+      text-decoration: underline
+      cursor: pointer
+      &:after
+        content: ''
+        position: absolute
+        right: rem(6)
+        bottom: 0
+        width: 1px
+        height: 16px
+        background: $footerColor
+      &:last-child
+        &:after
+          display: none
+      &:hover
+        color: $backgroundWhite
+        font-weight: bold

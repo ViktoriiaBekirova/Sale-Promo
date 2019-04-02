@@ -1,0 +1,64 @@
+.header-content
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background: $headerColor
+  z-index: 100
+
+.header
+  display: flex
+  position: relative
+  justify-content: space-between
+  padding: rem(3) 0 rem(9) 0
+  @media (max-width: $bigPhone)
+    flex-direction: column
+  &__logo
+    display: flex
+    align-items: center
+    cursor: pointer
+    &_img
+      position: relative
+      width: rem(47)
+      height: rem(52)
+      object-fit: contain
+      margin-right: rem(17)
+      transition: all 0.5s ease
+      @keyframes rotate
+        from
+          transform: rotate(360deg)
+    &_text
+      text-transform: uppercase
+      transition: all 0.5s ease
+    &:hover .header__logo_img
+      animation: rotate 1s linear infinite
+    &:hover .header__logo_text
+      color: $redColor
+  &__social
+    display: flex
+    align-items: center
+    margin-right: rem(17)
+    @media (max-width: $bigPhone)
+      align-self: flex-end
+      margin-right: 0
+    &_img
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      width: rem(44)
+      height: rem(44)
+      margin-left: rem(10)
+      object-fit: contain
+      border: 2px solid #f8faf9
+      border-radius: 30px
+      cursor: pointer
+      transition: 0.3s ease
+      img
+        width: 60%
+        height: 60%
+        top: auto
+        object-position: center
+      &:hover
+        transform: scale(1.1)
+        background: $redColor

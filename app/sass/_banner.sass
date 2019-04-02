@@ -1,0 +1,92 @@
+.banner-content
+  position: relative
+  width: 100%
+  height: auto
+
+.banner
+  display: flex
+  justify-content: space-between
+  margin-top: rem(80)
+  background-image: url("../img/bg_banner.png")
+  background-repeat: repeat
+  background-size: contain
+  box-shadow: 0 9px 6px -9px rgba(#000000, 0.35), 0 -9px 6px -9px rgba(#000000, 0.35)
+  @media (max-width: $bigTablet)
+    flex-direction: column
+    justify-content: flex-start
+  @media (max-width: $bigPhone)
+    margin-top: rem(129)
+  &__leftContent
+    position: relative
+    width: 100%
+    max-width: rem(457)
+    min-height: rem(250)
+    @media (max-width: $bigTablet)
+      order: 3
+  &__centerContent
+    position: relative
+    margin: rem(20) rem(-30) 0 rem(34)
+    z-index: 2
+    @media (max-width: $bigTablet)
+      order: 2
+      align-self: center
+      margin: rem(20) rem(20) 0 rem(20)
+    &_text
+      font-family: ArctikaScript, sans-serif
+      font-size: rem(108.33)
+      color: $redColor
+      line-height: initial
+      text-shadow: -0 -4px 0 #FFFFFF, 0 -4px 0 #FFFFFF, -0 4px 0 #FFFFFF, 0 4px 0 #FFFFFF, -4px -0 0 #FFFFFF, 4px -0 0 #FFFFFF, -4px 0 0 #FFFFFF, 4px 0 0 #FFFFFF, -1px -4px 0 #FFFFFF, 1px -4px 0 #FFFFFF, -1px 4px 0 #FFFFFF, 1px 4px 0 #FFFFFF, -4px -1px 0 #FFFFFF, 4px -1px 0 #FFFFFF, -4px 1px 0 #FFFFFF, 4px 1px 0 #FFFFFF, -2px -4px 0 #FFFFFF, 2px -4px 0   #FFFFFF,-2px  4px 0 #FFFFFF, 2px 4px 0 #FFFFFF, -4px -2px 0 #FFFFFF, 4px -2px 0 #FFFFFF, -4px 2px 0  #FFFFFF, 4px 2px 0 #FFFFFF, -3px -4px 0 #FFFFFF, 3px -4px 0 #FFFFFF, -3px 4px 0 #FFFFFF, 3px 4px 0 #FFFFFF, -4px -3px 0 #FFFFFF, 4px -3px 0 #FFFFFF, -4px 3px 0 #FFFFFF, 4px 3px 0 #FFFFFF, -4px -4px 0 #FFFFFF, 4px -4px 0 #FFFFFF, -4px 4px 0 #FFFFFF, 4px 4px 0 #FFFFFF, -4px -4px 0 #FFFFFF, 4px -4px 0 #FFFFFF, -4px 4px 0 #FFFFFF, 4px 4px 0 #FFFFFF
+      @media (max-width: $mobile)
+        font-size: rem(80)
+      @media (max-width: $bigPhone)
+        font-size: rem(70)
+      &.mar-t
+        margin-top: rem(-10)
+  &__rightContent
+    position: relative
+    width: 100%
+    max-width: rem(393)
+    min-height: rem(250)
+    @media (max-width: $bigTablet)
+      order: 1
+      align-self: flex-end
+    img
+      right: 0
+  &__sale
+    position: absolute
+    width: rem(111)
+    height: rem(231)
+    right: rem(44)
+    bottom: rem(-119)
+    z-index: 2
+    @media (max-width: $bigTablet)
+      width: rem(78)
+      height: rem(162)
+      right: rem(10)
+      bottom: rem(-53)
+    &_text
+      display: block
+      position: absolute
+      top: 52%
+      left: -17px
+      font-family: ArctikaScript, sans-serif
+      font-size: rem(25)
+      color: $backgroundWhite
+      text-align: center
+      white-space: nowrap
+      transform: rotate(-90deg)
+      z-index: 3
+      @media (max-width: $bigTablet)
+        left: rem(-14)
+        font-size: rem(18)
+
+.banner__leftContent, .banner__rightContent
+  img
+    @media (min-width: $bigTablet)
+      width: auto
+      height: auto
+
+
+
+
